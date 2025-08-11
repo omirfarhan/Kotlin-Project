@@ -63,7 +63,7 @@ fun textcompose(value: String){
     Text(
         modifier = Modifier.
         fillMaxSize().
-        fillMaxWidth().background(Color.LightGray)
+        fillMaxWidth().background(Color.Black)
         ,
         text = stringResource(R.string.Wellcome_To_jetpack_compose),
         fontSize = 18.sp,
