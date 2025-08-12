@@ -17,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -61,15 +62,14 @@ class MainActivity : ComponentActivity() {
 fun textcompose(value: String){
 
     Text(
-        modifier = Modifier.
-        fillMaxSize().
-        fillMaxWidth().background(Color.Black)
-        ,
-        text = stringResource(R.string.Wellcome_To_jetpack_compose),
-        fontSize = 18.sp,
+        modifier = Modifier.width(200.dp)
+            .height(100.dp)
+            .padding(10.dp),
+        text = "Hello Jetpack Compose",
+        fontSize = 15.sp,
+        color = Color.Black,
 
-        fontWeight = FontWeight.Black,
-        color = Color.Black
+
 
     )
 
