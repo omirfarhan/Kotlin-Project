@@ -5,6 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -15,8 +17,11 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -31,22 +36,12 @@ class MainActivity : ComponentActivity() {
 
 
 
-       // enableEdgeToEdge()
+        //enableEdgeToEdge()
 
 
         setContent {
 
-            textcompose("Android")
-
-           /* MyApplicationTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-
-
-
-                }
-            }
-
-            */
+            mainScreen()
 
 
         }
@@ -58,47 +53,50 @@ class MainActivity : ComponentActivity() {
 
 }
 
+
+
+//UI main work
 @Composable
-fun textcompose(value: String){
+fun mainScreen(){
+    Column (modifier = Modifier
+        .fillMaxWidth()
+        .fillMaxHeight()
+        .background(Color.LightGray)
+    ) {
+        textcompose(" Android", shadowcolor = Color.Yellow)
+        textcompose(" Kotlin", shadowcolor = Color.Black)
+    }
+
+}
+
+@Composable
+fun textcompose(main: String,shadowcolor: Color){
+
+    val shadowoffset= Offset(x=4f,y=6f)
 
     Text(
-        modifier = Modifier.width(200.dp)
+        modifier = Modifier
+            .fillMaxWidth()
             .height(100.dp)
-            .padding(10.dp),
-        text = "Hello Jetpack Compose",
-        fontSize = 15.sp,
-        color = Color.Black,
+            .padding(start = 10.dp, end = 10.dp)
+            .background(Color.White),
+        text = "${stringResource(id= R.string.Wellcome_To_jetpack_compose)}$main",
 
+        fontStyle = FontStyle.Normal,
+        style = TextStyle(
+            fontSize = 22.sp,
+            fontStyle = FontStyle.Normal,
+            shadow = Shadow(shadowcolor,shadowoffset,4f)
+        )
 
-
-    )
+        )
 
 }
 
 @Preview(showBackground = true)
 @Composable
 fun Composeshow(){
-    textcompose("Android")
+
+    mainScreen()
+
 }
-
-
-
-
-/*
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-Text(
-    text = "Hello $name!",
-    modifier = modifier
-)
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-MyApplicationTheme {
-    Greeting("Android")
-}
-}
-
-*/
