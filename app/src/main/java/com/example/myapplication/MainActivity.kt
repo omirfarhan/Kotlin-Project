@@ -28,6 +28,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.myapplication.`1_Introduction`.Createfunction
+import com.example.myapplication.`1_Introduction`.ImageAccess
+import com.example.myapplication.`1_Introduction`.Resoursess
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -41,7 +44,9 @@ class MainActivity : ComponentActivity() {
 
         setContent {
 
-            mainScreen()
+            Resoursess("Android")
+            ImageAccess()
+
 
 
         }
@@ -77,10 +82,12 @@ fun textcompose(main: String,shadowcolor: Color){
     Text(
         modifier = Modifier
             .fillMaxWidth()
+
             .height(100.dp)
             .padding(start = 10.dp, end = 10.dp)
             .background(Color.White),
         text = "${stringResource(id= R.string.Wellcome_To_jetpack_compose)}$main",
+
 
         fontStyle = FontStyle.Normal,
         style = TextStyle(
