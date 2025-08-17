@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.sp
 import com.example.myapplication.`1_Introduction`.Createfunction
 import com.example.myapplication.`1_Introduction`.ImageAccess
 import com.example.myapplication.`1_Introduction`.Resoursess
+import com.example.myapplication.`3_CoreComponent`.marquText
 import com.example.myapplication.`3_CoreComponent`.textstyle
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
@@ -45,9 +46,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
 
-            Resoursess("Android")
-            ImageAccess()
-            textstyle()
+            marquText()
 
 
 
