@@ -32,6 +32,7 @@ import com.example.myapplication.`1_Introduction`.Createfunction
 import com.example.myapplication.`1_Introduction`.ImageAccess
 import com.example.myapplication.`1_Introduction`.Resoursess
 import com.example.myapplication.`3_CoreComponent`.marquText
+import com.example.myapplication.`3_CoreComponent`.simpleoutlinetext
 import com.example.myapplication.`3_CoreComponent`.textstyle
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
@@ -46,7 +47,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
 
-            marquText()
+            simpleoutlinetext()
 
 
 
