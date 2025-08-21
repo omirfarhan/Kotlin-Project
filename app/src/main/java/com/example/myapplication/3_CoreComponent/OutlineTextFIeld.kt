@@ -2,6 +2,8 @@ package com.example.myapplication.`3_CoreComponent`
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.Label
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -15,13 +17,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun simpleoutlinetext(){
 
-    var text by remember {
+    var text = remember {
         mutableStateOf("")
 
     }
@@ -52,11 +56,20 @@ fun simpleoutlinetext(){
 
         TextField(
 
-            value = text,
+            value = text.value,
             onValueChange = {
-                text=it
+                text.value=it
             },
-            textStyle = TextStyle(brush = brusha)
+            label = {
+                Text("Enter Password")
+            },
+
+
+            visualTransformation = PasswordVisualTransformation(),
+            keyboardOptions = KeyboardOptions(
+                keyboardType = KeyboardType.Password
+            )
+
 
         )
 
