@@ -12,9 +12,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextLinkStyles
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.text.withLink
@@ -70,34 +72,38 @@ fun annotatedstring(){
 
     ) {
 
+        val urilinkbrowser=LocalUriHandler.current
 
-        val uriHandler = LocalUriHandler.current
         Text(
 
             buildAnnotatedString {
-                append("This is link: ")
-                val link = LinkAnnotation.Url(
 
+                append("Essential DSA sheet: ")
+
+                val linkss= LinkAnnotation.Url(
                     "https://docs.google.com/spreadsheets/d/1mvlc8EYc3OVVU3X7NKoC0iZJr_45BL_pVxiJec0r94c/htmlview?usp=sharing",
+
                     TextLinkStyles(
                         SpanStyle(
-                            color = Color.Red
+                            color = Color.Cyan
                         )
                     )
 
-                ) {
-                    val url = (it as LinkAnnotation.Url).url
-                    uriHandler.openUri(url)
-
+                ){
+                    //onclick option
+                    val mainurlonclick=(it as LinkAnnotation.Url).url
+                    urilinkbrowser.openUri(mainurlonclick)
                 }
 
-                withLink(link) {
-                    append("Link")
-                }
+               withLink(linkss){
+                   append("Open Link")
+               }
+
 
             }
 
         )
+
     }
 
 }
