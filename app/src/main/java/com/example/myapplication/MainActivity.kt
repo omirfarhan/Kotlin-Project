@@ -21,6 +21,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontStyle
@@ -31,6 +32,7 @@ import androidx.compose.ui.unit.sp
 import com.example.myapplication.`1_Introduction`.Createfunction
 import com.example.myapplication.`1_Introduction`.ImageAccess
 import com.example.myapplication.`1_Introduction`.Resoursess
+import com.example.myapplication.`3_CoreComponent`.annotatedstring
 import com.example.myapplication.`3_CoreComponent`.marquText
 import com.example.myapplication.`3_CoreComponent`.selectableoption
 import com.example.myapplication.`3_CoreComponent`.simpleoutlinetext
@@ -48,7 +50,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
 
-            selectableoption()
+            annotatedstring()
 
 
         }
