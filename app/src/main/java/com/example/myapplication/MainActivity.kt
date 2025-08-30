@@ -33,11 +33,12 @@ import com.example.myapplication.`1_Introduction`.Createfunction
 import com.example.myapplication.`1_Introduction`.ImageAccess
 import com.example.myapplication.`1_Introduction`.Resoursess
 import com.example.myapplication.`3_CoreComponent`.annotatedstring
-import com.example.myapplication.`3_CoreComponent`.filledbutton
+
 import com.example.myapplication.`3_CoreComponent`.marquText
 import com.example.myapplication.`3_CoreComponent`.selectableoption
 import com.example.myapplication.`3_CoreComponent`.simpleoutlinetext
 import com.example.myapplication.`3_CoreComponent`.textstyle
+import com.example.myapplication.`4LayoutComposable`.examplew
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -50,8 +51,7 @@ class MainActivity : ComponentActivity() {
 
 
         setContent {
-
-            filledbutton()
+            examplew()
 
 
         }

@@ -4,7 +4,9 @@ import android.widget.Toast
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
+import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.FilledTonalButton
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -24,17 +26,44 @@ fun filledbutton(){
         contentAlignment = Alignment.Center
 
     ){
-        FilledTonalButton(
-            onClick = {
 
-                Toast.makeText(context,"THis is button", Toast.LENGTH_LONG).show()
+        ElevatedButton(
+            onClick = {
 
             }
         ) {
-
-            Text("Tonal button")
+            Text("Elevated Button")
         }
+
     }
+
+//    {
+//        OutlinedButton(
+//            onClick = {
+//
+//            }
+//        ) {
+//
+//            Text("Button")
+//        }
+//
+//    }
+
+//    {
+//        FilledTonalButton(
+//            onClick = {
+//
+//                Toast.makeText(context,"This is button", Toast.LENGTH_LONG).show()
+//
+//            }
+//        ) {
+//
+//            Text("Tonal button")
+//        }
+//    }
+
+
+
 
 
 
