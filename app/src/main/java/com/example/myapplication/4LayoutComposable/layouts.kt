@@ -90,8 +90,55 @@ fun examplew(){
 
 }
 
+@Composable
+fun explain2(){
+
+    ConstraintLayout(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(150.dp)
+            .background(color = Color.LightGray)
+
+    ) {
+
+        val (Text1,Text2,Text3) =createRefs()
+
+        Text("Bottom left",
+            modifier = Modifier.constrainAs(Text1){
+                bottom.linkTo(parent.bottom, margin = 8.dp)
+                start.linkTo(parent.start, margin = 8.dp)
+            }
+            )
+
+        Text("Center",
+            modifier = Modifier.constrainAs(Text2){
+                start.linkTo(parent.start)
+                top.linkTo(parent.top)
+                bottom.linkTo(parent.bottom)
+                end.linkTo(parent.end)
+
+            },
+
+            )
+
+        Text("Top right side",
+            modifier = Modifier.constrainAs(Text3){
+                end.linkTo(parent.end, margin = 8.dp)
+                top.linkTo(parent.top, margin = 8.dp)
+            }
+
+        )
+
+
+    }
+
+}
+
+
+
+
 @Preview(showSystemUi = true)
 @Composable
 fun ddisplayshowm(){
-    examplew()
+    explain2()
 }
