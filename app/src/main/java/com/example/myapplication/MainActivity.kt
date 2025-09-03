@@ -39,6 +39,8 @@ import com.example.myapplication.`3_CoreComponent`.selectableoption
 import com.example.myapplication.`3_CoreComponent`.simpleoutlinetext
 import com.example.myapplication.`3_CoreComponent`.textstyle
 import com.example.myapplication.`4LayoutComposable`.examplew
+import com.example.myapplication.`4LayoutComposable`.partialbottomsheet
+import com.example.myapplication.`4LayoutComposable`.previewbottomsheet
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -51,7 +53,7 @@ class MainActivity : ComponentActivity() {
 
 
         setContent {
-            examplew()
+            previewbottomsheet()
 
 
         }
