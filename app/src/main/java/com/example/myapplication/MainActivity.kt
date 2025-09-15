@@ -29,6 +29,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.myapplication.`11_Dropdownmenu`.dropdownmenu
 import com.example.myapplication.`1_Introduction`.Createfunction
 import com.example.myapplication.`1_Introduction`.ImageAccess
 import com.example.myapplication.`1_Introduction`.Resoursess
@@ -38,9 +39,12 @@ import com.example.myapplication.`3_CoreComponent`.marquText
 import com.example.myapplication.`3_CoreComponent`.selectableoption
 import com.example.myapplication.`3_CoreComponent`.simpleoutlinetext
 import com.example.myapplication.`3_CoreComponent`.textstyle
+import com.example.myapplication.`4LayoutComposable`.CheckboxSystem
+import com.example.myapplication.`4LayoutComposable`.dialogeImage
+
 import com.example.myapplication.`4LayoutComposable`.examplew
+import com.example.myapplication.`4LayoutComposable`.floatingButton
 import com.example.myapplication.`4LayoutComposable`.partialbottomsheet
-import com.example.myapplication.`4LayoutComposable`.previewbottomsheet
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -53,7 +57,7 @@ class MainActivity : ComponentActivity() {
 
 
         setContent {
-            previewbottomsheet()
+            dropdownmenu()
 
 
         }
