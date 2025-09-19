@@ -45,6 +45,7 @@ import com.example.myapplication.`4LayoutComposable`.dialogeImage
 import com.example.myapplication.`4LayoutComposable`.examplew
 import com.example.myapplication.`4LayoutComposable`.floatingButton
 import com.example.myapplication.`4LayoutComposable`.partialbottomsheet
+import com.example.myapplication.`5_Scaffolds`.scaffolds
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -57,7 +58,7 @@ class MainActivity : ComponentActivity() {
 
 
         setContent {
-            dropdownmenu()
+            scaffolds()
 
 
         }
