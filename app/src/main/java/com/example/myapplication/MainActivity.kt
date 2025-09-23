@@ -46,6 +46,8 @@ import com.example.myapplication.`4LayoutComposable`.examplew
 import com.example.myapplication.`4LayoutComposable`.floatingButton
 import com.example.myapplication.`4LayoutComposable`.partialbottomsheet
 import com.example.myapplication.`5_Scaffolds`.scaffolds
+import com.example.myapplication.`8_NavigationDRawer`.NavigationExample
+import com.example.myapplication.`8_NavigationDRawer`.navigationdrawer
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -58,7 +60,7 @@ class MainActivity : ComponentActivity() {
 
 
         setContent {
-            scaffolds()
+            NavigationExample()
 
 
         }
